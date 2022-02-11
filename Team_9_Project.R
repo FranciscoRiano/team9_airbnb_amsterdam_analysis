@@ -31,3 +31,6 @@ data %>% ggplot(aes(price, review_scores_rating)) +
 
 data %>% ggplot(aes(review_scores_rating)) +
   geom_histogram(bins = 10)
+
+# Analyses
+model1 <- lm(review_scores_rating ~ price, data); summary(model1)
