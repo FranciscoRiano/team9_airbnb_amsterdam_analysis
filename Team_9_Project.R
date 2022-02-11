@@ -19,3 +19,15 @@ data$room_type <- as.factor(data$room_type)
 data %>% group_by(room_type) %>% summarize(mean(review_scores_rating))
 data$property_type <- as.factor(data$property_type)
 data %>% group_by(property_type) %>% summarize(mean(review_scores_rating))
+
+# some graphs
+library(ggplot2)
+
+data$price <- as.numeric(gsub("\\$", "", data$price))
+
+data %>% ggplot(aes(price, review_scores_rating)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+data %>% ggplot(aes(review_scores_rating)) +
+  geom_histogram(bins = 10)
