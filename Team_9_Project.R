@@ -1,9 +1,16 @@
 # Repository for Team 9 Data Preparation and Workflow Management
 
+library(data.table)
+library(R.utils)
+listings <- fread("listings.csv.gz")
+calendar <- fread("calendar.csv.gz")
+reviews <- fread("reviews.csv.gz")
+library(tidyverse)
+
 
 
 # it is important to get the three files and en the setwd function we have to add the path where the 3 files are hosted
-setwd("C:/Users/frian/OneDrive/Documentos - copia/tilburg/Lessons/1.Block3/workflow management")
+setwd()
 
 
 library(data.table)
@@ -16,6 +23,7 @@ library(tidyverse)
 View(listings)
 View(calendar)
 View(reviews)
+
 
 data <- reviews %>% left_join(listings, by = c("listing_id" = "id"), suffix = c("rev", "list")) %>%
   select(-ends_with("url"))
@@ -43,6 +51,7 @@ data %>% ggplot(aes(review_scores_rating)) +
   geom_histogram(bins = 10)
 
 # Analyses
+
 model1 <- lm(review_scores_rating ~ price, data); summary(model1)
 model_2 <- lm(bedrooms ~ accommodates+room_type, listings)
 summary(model_2)
@@ -53,3 +62,4 @@ summary(listings)
 head(calendar)
 summary(reviews)
 summary(calendar)
+
