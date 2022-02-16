@@ -3,8 +3,8 @@
 # Clear workspace
 rm(list =ls())
 
-# Make current directory the working directory. It is important to get the three files and en the setwd function we have to add the path where the 3 files are hosted
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))  
+# Make current directory the working directory. It is important to get the three files and with the setwd function we have to add the path where the 3 files are hosted
+setwd()  
 
 #Import datasets
 library(data.table)
@@ -74,3 +74,8 @@ head(calendar)
 summary(reviews)
 summary(calendar)
 
+gc()
+
+sum(is.na(listings$host_acceptance_rate))
+
+dim(listings)
