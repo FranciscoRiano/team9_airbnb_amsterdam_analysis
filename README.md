@@ -9,8 +9,12 @@
 ## Repository overview
 
 ## Running instructions
+Install R and Rstudio, and additional packages.
+
+[Will be updated] Explain to potential users how to run/replicate your workflow.
 
 ## More resources
+Related literature and/or documentation. (Link)
 
 ## About
 This research is conducted as part of the course [Data Preparation and Workflow Management](https://github.com/hannesdatta/course-dprep) of TiSEM department at Tilburg University.
