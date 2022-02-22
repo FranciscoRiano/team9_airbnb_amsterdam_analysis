@@ -8,79 +8,18 @@ setwd()
 
 #Import datasets
 library(data.table)
-library(R.utils)
-listings <- fread("data/listings.csv.gz")
-calendar <- fread("data/calendar.csv.gz")
-reviews <- fread("data/reviews.csv.gz")
-holidays <- fread("data/Holidays_NL_North.csv")
 library(tidyverse)
 
-#View the datasets
-View(listings)
-View(calendar)
-View(reviews)
+#Get data
+data <- fread("data/calendar_holiday_distance.csv.gz")
+View(data)
 
-#Merge the listings dataset with the reviews
-reviews$listing_id <- as.integer(reviews$listing_id)
-data <- reviews %>% left_join(listings, by = c("listing_id" = "id"), suffix = c("rev", "list")) %>%
-  select(-ends_with("url"))
-
+#Data inspection
+dim(data)
 glimpse(data)
-#Too big: Error: cannot allocate vector of size 765.9 Mb
-  #large_data <- data %>% left_join(calendar, by = "listing_id")
+summary(data)
 
-#Change strings to date format
-data$fdate <- as.Date(data$date, "%Y-%m-%d")
-holidays$fdate <- as.Date(holidays$Date, "%d-%m-%Y")
-data <- data %>% left_join(holidays, by = "fdate")
-#Correlation matrix
-library(corrplot)
-data %>% select(starts_with("review_score"))%>%
-  drop_na() %>%
-  cor
-
-# review scores by neighbourhood, room type and property type
-data$neighbourhood <- as.factor(data$neighbourhood)
-data %>% group_by(neighbourhood) %>% summarize(mean(review_scores_rating))
-data$room_type <- as.factor(data$room_type)
-data %>% group_by(room_type) %>% summarize(mean(review_scores_rating))
-data$property_type <- as.factor(data$property_type)
-data %>% group_by(property_type) %>% summarize(mean(review_scores_rating))
-
-#Trying to avoid repition doesn't work
-group_mean <- function(group, mean) {
-  data %>% group_by(!!group) %>% summarize(mean(!!mean))
-}
-
-group_mean(property_type, review_scores_rating)
-
-# some graphs
-library(ggplot2)
-
+#Cleaning data
 data$price <- as.numeric(gsub("\\$", "", data$price))
+data$adjusted_price <- as.numeric(gsub("\\$", "", data$adjusted_price))
 
-data %>% ggplot(aes(price, review_scores_rating)) +
-  geom_point() +
-  geom_smooth(method = "lm")
-
-data %>% ggplot(aes(review_scores_rating)) +
-  geom_histogram(breaks = seq(0, 5, by = 0.1))
-
-# Analyses
-
-model1 <- lm(review_scores_rating ~ price, data); summary(model1)
-model2 <- lm(bedrooms ~ accommodates+room_type, listings)
-summary(model2)
-
-
-# Descriptive statistics
-summary(listings)
-head(calendar)
-summary(reviews)
-summary(calendar)
-
-gc()
-
-sum(is.na(listings$host_acceptance_rate))
-
-dim(listings)
