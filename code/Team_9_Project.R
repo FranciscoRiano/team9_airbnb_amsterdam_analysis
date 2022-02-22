@@ -9,9 +9,10 @@ setwd()
 #Import datasets
 library(data.table)
 library(R.utils)
-listings <- fread("listings.csv.gz")
-calendar <- fread("calendar.csv.gz")
-reviews <- fread("reviews.csv.gz")
+listings <- fread("data/listings.csv.gz")
+calendar <- fread("data/calendar.csv.gz")
+reviews <- fread("data/reviews.csv.gz")
+holidays <- fread("data/Holidays_NL_North.csv")
 library(tidyverse)
 
 #View the datasets
@@ -20,14 +21,18 @@ View(calendar)
 View(reviews)
 
 #Merge the listings dataset with the reviews
+reviews$listing_id <- as.integer(reviews$listing_id)
 data <- reviews %>% left_join(listings, by = c("listing_id" = "id"), suffix = c("rev", "list")) %>%
   select(-ends_with("url"))
 
 glimpse(data)
-
 #Too big: Error: cannot allocate vector of size 765.9 Mb
   #large_data <- data %>% left_join(calendar, by = "listing_id")
 
+#Change strings to date format
+data$fdate <- as.Date(data$date, "%Y-%m-%d")
+holidays$fdate <- as.Date(holidays$Date, "%d-%m-%Y")
+data <- data %>% left_join(holidays, by = "fdate")
 #Correlation matrix
 library(corrplot)
 data %>% select(starts_with("review_score"))%>%
@@ -44,7 +49,7 @@ data %>% group_by(property_type) %>% summarize(mean(review_scores_rating))
 
 #Trying to avoid repition doesn't work
 group_mean <- function(group, mean) {
-  data %>% group_by(group) %>% summarize(mean(mean))
+  data %>% group_by(!!group) %>% summarize(mean(!!mean))
 }
 
 group_mean(property_type, review_scores_rating)
