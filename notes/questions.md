@@ -7,6 +7,7 @@
 
 # Questions 22 Feb 
 1. Research question: aproved or not by the professor. Is the number of independent variables enough to carry out our analysis
-2. If there is any way to collect all holidays through internet
-3. Google drive issue
-4. Data cleaning is it enough?
+2. How can we integrate the calendar and holiday dataset with the listing data
+4. Google drive issue
+5. Data cleaning is it enough?
+6. 
