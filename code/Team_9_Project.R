@@ -7,9 +7,6 @@ rm(list =ls())
 library(data.table)
 library(tidyverse)
 
-#Get data
-data <- fread("../data/calendar_holiday_distance.csv.gz")
-View(data)
 
 #Data inspection
 dim(data)
