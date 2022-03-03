@@ -24,16 +24,12 @@ download_data <- function(url, filename, filepath) {
   download.file(url = url, destfile = paste0(filepath, filename))
 }
 
-download_data(url = "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-03-04/data/reviews.csv.gz",
-              filename = "reviews.csv.gz", filepath = "data/")
-
 download_data(url = "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-03-04/data/calendar.csv.gz",
               filename = "calendar.csv.gz", filepath = "data/")
 
 download_data(url = "http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-03-04/data/listings.csv.gz",
               filename = "listings.csv.gz", filepath = "data/")
 
-reviews <- fread("data/reviews.csv.gz")
 calendar <- fread("data/calendar.csv.gz")
 listings <- fread("data/listings.csv.gz")
 distance <- fread("data/distance_cs.csv")
@@ -49,12 +45,15 @@ listings <- listings %>% left_join(distance, by = "id")
 calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))
 calendar <- calendar %>% left_join(holidays, by= c("date" = "Date"))
 
-#Write csv.gz file with all the datasets together
+# Write csv.gz file with all the datasets together
 fwrite(calendar, "data/calendar_holiday_distance.csv.gz")
 
-#Remove unneccesary files
-file.remove("data/reviews.csv.gz")
+# Get final dataset
+data <- fread("data/calendar_holiday_distance.csv.gz")
+
+# Remove unnecessary files
 file.remove("data/calendar.csv.gz")
 file.remove("data/listings.csv.gz")
 file.remove("data/holidays_nl_north.csv")
 file.remove("data/distance_cs.csv")
+file.remove("data/calendar_holiday_distance.csv.gz")
