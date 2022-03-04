@@ -23,11 +23,11 @@ The data used in this project come from website insideairbnb.com and ??? (holida
 
 ### Data Collection
 
-This research focuses on price analysis of AirBnB in Amsterdam, the Netherlands between 2012 and 2019. Therefore, only data from Amsterdam in 2012-2019 were downloaded form the website. what info data contain... Number of observations ... Missing values ... The downloaded files were stored in Google Drive to ensure the same dataset can be also accessed in the future. To download the data see data/download_data.R.
+This research focuses on price analysis of AirBnB in Amsterdam, the Netherlands between years 2012 and 2019. Therefore, only data from Amsterdam in 2012-2019 were downloaded form the website, namely, listings and calendar information. The downloaded files were stored in Google Drive to ensure the same dataset can be also accessed in the future. To download the data see data/download_data.R.
 
 ### Data Processing
 
-Several steps were taken in order to create a final dataset that will be used throughout the analysis. Firstly, all the non-essential variables were removed from listings dataset. Id and five control variables were kept namely, property_type, room_type, accommodates, bedrooms, beds. Next, the listings dataset was merged with distance variable which shows the number of meters from a given accommodation to the Amsterdam Central station. Lastly, datasets calendar, listings and holidays were merged together.
+Several steps were taken in order to create a final dataset that will be used throughout the analysis. Firstly, all the non-essential variables were removed from listings dataset. Id and five control variables were kept namely, property_type, room_type, accommodates, bedrooms, beds. Next, the listings dataset was merged with distance variable which shows the number of meters from a given accommodation to the Amsterdam Central station. Lastly, datasets calendar, listings and holidays were merged together. Missing values ???...
 
 ## Methodology
 
