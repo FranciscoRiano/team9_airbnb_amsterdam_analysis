@@ -2,6 +2,13 @@
 
 ---
 
+Do factors like economic forecast, number of visitors in Amsterdam, Dutch holidays or distance from Amsterdam Central station influence the prices of AirBnB listings? Does effect of distance from Amsterdam Central station on AirBnB pricing differ depending on whether there is a holiday or not?
+
+<p align="center">
+  <img width="70%" src="https://blog.atairbnb.com/wp-content/uploads/2015/06/DynamicPricing-Blog-AL-02-03.jpg">
+</p>
+
+
 ## Motivation
 
 ## Method and results
