@@ -20,3 +20,16 @@ summary(data)
 data$price <- as.numeric(gsub("\\$", "", data$price))
 data$adjusted_price <- as.numeric(gsub("\\$", "", data$adjusted_price))
 
+names(data)[names(data) == "distance_to_the_centraal_station "] <- "dist_cs"
+summary(data)
+
+#Correlation matrix
+library(Hmisc)
+data %>%
+  select(price, adjusted_price, dist_cs, Holiday) %>%
+  as.matrix() %>%
+  rcorr(type="spearman")
+
+#Scatter plot between variables
+data %>% ggplot(aes(price, dist_cs)) +
+  geom_point()
