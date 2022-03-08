@@ -35,7 +35,7 @@ calendar <- calendar %>% left_join(holidays, by= c("date" = "Date"))
 fwrite(calendar, "data/calendar_holiday_distance.csv.gz")
 
 # Get final dataset
-data <- fread("data/calendar_holiday_distance.csv.gz")
+data <- fread("../data/calendar_holiday_distance.csv.gz")
 
 # Remove unnecessary files
 file.remove("data/calendar.csv")

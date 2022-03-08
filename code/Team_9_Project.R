@@ -23,10 +23,12 @@ summary(data)
 #Correlation matrix
 library(Hmisc)
 data %>%
-  select(price, adjusted_price, dist_cs, Holiday) %>%
+  select(price, adjusted_price, distance_to_the_centraal_station, Holiday) %>%
   as.matrix() %>%
   rcorr(type="spearman")
 
 #Scatter plot between variables
-data %>% ggplot(aes(price, dist_cs)) +
-  geom_point()
+#data %>% ggplot(aes(price, distance_to_the_centraal_station)) +
+ # geom_point()
+
+summary(lm(price ~ distance_to_the_centraal_station*Holiday, data))
