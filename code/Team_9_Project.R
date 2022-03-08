@@ -16,6 +16,7 @@ summary(data)
 #Cleaning data
 data$price <- as.numeric(gsub("\\$", "", data$price))
 data$adjusted_price <- as.numeric(gsub("\\$", "", data$adjusted_price))
+sum(is.na(data))
 
 names(data)[names(data) == "distance_to_the_centraal_station "] <- "dist_cs"
 summary(data)
