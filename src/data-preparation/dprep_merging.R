@@ -13,14 +13,15 @@ holidays$Date <- as.Date(holidays$Date, "%d-%m-%Y")
 calendar$date <- as.Date(calendar$date, "%Y-%m-%d")
 
 # Dataset merging
-listings <- listings %>% select(c(id, property_type, room_type, accommodates, bedrooms, beds))
-listings <- listings %>% left_join(distance, by = "id")
+listings <- listings %>%
+  select(c(id, property_type, room_type, accommodates, bedrooms, beds)) %>%
+  left_join(distance, by = "id")
 
-calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))
-calendar <- calendar %>% left_join(holidays, by= c("date" = "Date"))
+calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))%>%
+  left_join(holidays, by= c("date" = "Date"))
 
 # Write csv.gz file with all the datasets together
-fwrite(calendar, "../../gen/output/calendar_holiday_distance.csv.gz")
+fwrite(calendar, "../../gen/input/calendar_holiday_distance.csv.gz")
 
 # Remove unnecessary files
 file.remove("../../data/calendar.csv")
