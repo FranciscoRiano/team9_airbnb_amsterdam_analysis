@@ -37,6 +37,8 @@ Several steps were taken in order to create a final dataset that will be used th
 
 ### Managerial Relevance
 
-### Future Directions of Research
+### Limitations and Future Directions of Research
+
+This study has also some limitations. Firstly, the research was geographically limited to Amsterdam and it only analyzed data from AirBnB. Thus, future study can focus on different location or industry to improve the generalizability. Secondly, other factors that might be driving or influencing the relationship could be evaluated. For example, the reviews and ratings as well as sentiment between reviews might be another drivers of the relationship and can provide interesting insights in general.  
 
 ## References
