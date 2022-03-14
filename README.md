@@ -1,4 +1,4 @@
-# Does the infrastructure of Amsterdam matter in the growing industry of Airbnb?
+# Does the infrastructure of Amsterdam make a difference?
 
 ---
 
@@ -11,11 +11,18 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
 
 ## Motivation
 
-This code is written in order to find answers to these questions.
-The reason for diving into this problem is because
-
+Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' could be asked. This code is written in order to find answers to these questions which focues on Airbnb listings in Amsterdam.
 
 ## Method and results
+
+### Research method
+The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from Amsterdam Central Station', 'Distance to/from Schiphol Airport', 'Distance to/from tram stops', 'Distance to/from metro stops' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderator 'Holidays in NL' will be included and analyzed. According to this model, the research questions can be answered.
+
+![WhatsApp Image 2022-03-13 at 5 05 55 PM](https://user-images.githubusercontent.com/98962946/158178822-28fd9df1-2965-4463-89f9-adf1cc83551b.jpeg)
+
+### Results
+
+### Conclusion
 
 ## Repository overview
 
@@ -27,9 +34,14 @@ Moreover, an RMarkdown file is included. This file includes the report of our st
 
 ## Running instructions
 First of all, [Make](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/) is needed to run the files. The directory works with Make which should be run in the terminal (Mac users) or in git bash (Windows users). Moreover, [R-studio](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/) is needed to run the R-files. To run the code used in the study, the following packages need to be installed first:
-
-[Will be updated] Explain to potential users how to run/replicate your workflow.
-
+```{r}
+install.packages("modelsummary")
+install.packages("rlist")
+install.packages("tidyverse")
+install.packages("data.table")
+install.packages("dplyr")
+install.packages("googledrive")
+```
 ## More resources
 Related literature and/or documentation. (Link)
 
