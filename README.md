@@ -11,7 +11,7 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
 
 ## Motivation
 
-Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' could be asked. This code is written in order to find answers to these questions which focues on Airbnb listings in Amsterdam.
+Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
 
 ## Method and results
 
