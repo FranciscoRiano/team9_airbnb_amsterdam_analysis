@@ -13,7 +13,11 @@ library(modelsummary)
 
 ## Introduction
 
+Do factors like distance to/from Amsterdam Central station, distance to/from Schiphol airport, distance to/from tram stops and distance to/from metro stops influence the prices of AirBnB listings? And does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday or not?
+
 ### Motivation
+
+Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
 
 ## Background
 
@@ -30,6 +34,9 @@ This research focuses on price analysis of AirBnB in Amsterdam, the Netherlands 
 Several steps were taken in order to create a final dataset that will be used throughout the analysis. Firstly, all the non-essential variables were removed from listings dataset. Id and five control variables were kept namely, property_type, room_type, accommodates, bedrooms, beds. Next, the listings dataset was merged with distance variable which shows the number of meters from a given accommodation to the Amsterdam Central station. Lastly, datasets calendar, listings and holidays were merged together. Missing values ???...
 
 ## Methodology
+
+The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from Amsterdam Central Station', 'Distance to/from Schiphol Airport', 'Distance to/from tram stops', 'Distance to/from metro stops' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderator 'Holidays in NL' will be included and analyzed. According to this model, the research questions can be answered.
+
 
 ## Results
 
