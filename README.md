@@ -17,6 +17,8 @@ Infrastructure is the key to developing a successful tourism destination. Touris
 
 ### Research method
 The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from Amsterdam Central Station', 'Distance to/from Schiphol Airport', 'Distance to/from tram stops', 'Distance to/from metro stops' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderator 'Holidays in NL' will be included and analyzed. According to this model, the research questions can be answered.
+  Moderator: Holidays in NL.
+  The relationship between the infrastructure of Amsterdam and price of Airbnb may be influenced by whether it is holiday in the Netherlands.
 
 ![WhatsApp Image 2022-03-13 at 5 05 55 PM](https://user-images.githubusercontent.com/98962946/158178822-28fd9df1-2965-4463-89f9-adf1cc83551b.jpeg)
 
