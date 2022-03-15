@@ -6,7 +6,7 @@ data <- fread("../../gen/output/calendar_holiday_distance_clean.csv.gz")
 #Correlation matrix
 library(Hmisc)
 data %>%
-  select(price, adjusted_price, dist_cs, Holiday) %>%
+  select(price, adjusted_price, cs_dist, Holiday) %>%
   as.matrix() %>%
   rcorr(type="spearman")
 
@@ -15,11 +15,11 @@ pdf("../../gen/output/scatter_price_distance.pdf")
 library(ggplot2)
 data %>%
   slice_sample(n=10000) %>%
-  ggplot(aes(dist_cs, price)) +
+  ggplot(aes(cs_dist, price)) +
   geom_point() +
   geom_smooth(method="lm")
 
 dev.off()
 
 #Regression
-summary(lm(price ~ dist_cs*Holiday, data))
+summary(lm(price ~ cs_dist*Holiday, data))
