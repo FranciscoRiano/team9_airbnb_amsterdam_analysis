@@ -5,8 +5,7 @@ library(tidyverse)
 holidays <- fread("../../data/holidays_nl_north.csv")
 calendar <- fread("../../data/calendar.csv")
 listings <- fread("../../data/listings.csv")
-distance <- fread("../../data/distance.csv")
-tram_metro_stops <- fread("../../data/tram_metro_stops.csv")
+distance <- fread("../../gen/input/distances_infra.csv")
 
 # Change strings to date, so we can join on them
 holidays$Date <- as.Date(holidays$Date, "%d-%m-%Y")
