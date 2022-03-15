@@ -5,7 +5,7 @@ library(tidyverse)
 holidays <- fread("../../data/holidays_nl_north.csv")
 calendar <- fread("../../data/calendar.csv")
 listings <- fread("../../data/listings.csv")
-distance <- fread("../../gen/input/distances_infra.csv")
+distance <- fread("../../data/distances_infra.csv")
 
 # Change strings to date, so we can join on them
 holidays$Date <- as.Date(holidays$Date, "%d-%m-%Y")
@@ -21,10 +21,3 @@ calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))%>%
 
 # Write csv.gz file with all the datasets together
 fwrite(calendar, "../../gen/input/calendar_holiday_distance.csv.gz")
-
-# Remove unnecessary files
-file.remove("../../data/calendar.csv")
-file.remove("../../data/listings.csv")
-file.remove("../../data/holidays_nl_north.csv")
-file.remove("../../data/distance.csv")
-file.remove("../../data/tram_metro_stops.csv")
