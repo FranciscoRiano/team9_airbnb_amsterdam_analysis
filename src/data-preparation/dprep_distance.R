@@ -43,6 +43,28 @@ number_infra_eucl <- function(data, lon, lat, radius) {
   return(sum(all_distances < radius))
 }
 
+number_infra_eucl2 <- function(data, lon, lat, radius) {
+  all_distances <- sapply(1:nrow(data), function(row) {
+    dist <- sqrt(((lon-data[row, 'LNG'])*(40075000/360))^(2)+((lat-data[row, 'LAT'])*(40075000/360))^(2))
+    return(dist)
+  })
+  return(sum(all_distances < radius))
+}
+
+
+number_infra_eucl3 <- function(data, lon, lat) {
+  all_distances <- sapply(1:nrow(data), function(row) {
+    dist <- sqrt(((lon-data[row, 'LNG'])*(40075000/360))^(2)+((lat-data[row, 'LAT'])*(40075000/360))^(2))
+    return(dist)
+  })
+  return(all_distances)
+}
+
+system.time({void<-number_infra_eucl(swimmingpools, listings$longitude, listings$latitude, radius=500)})
+system.time({void<-number_infra_eucl2(swimmingpools, listings$longitude, listings$latitude, radius=500)})
+
+
+                      
 #A for loop that loops over every dataset and adds minimum distance plus number of infras
 datasets <- list(metro, tram, swimmingpools, Schiphol, centralstat, religion, park, sport)
 variable_names <- c('metro', 'tram', 'swim', 'schiphol', 'cs', 'religion', 'park', 'sport')
