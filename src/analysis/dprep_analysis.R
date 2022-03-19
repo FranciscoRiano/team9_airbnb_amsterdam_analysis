@@ -17,9 +17,30 @@ data %>%
   slice_sample(n=10000) %>%
   ggplot(aes(cs_dist, price)) +
   geom_point() +
-  geom_smooth(method="lm")
+  geom_smooth(method="loess")
+
+data %>%
+  slice_sample(n=10000) %>%
+  ggplot(aes(schiphol_dist, price)) +
+  geom_point() +
+  geom_smooth(method="loess")
+
+data %>%
+  slice_sample(n=10000) %>%
+  ggplot(aes(log(religion_dist), price)) +
+  geom_point() +
+  geom_smooth(method="loess")
+
+data %>%
+  slice_sample(n=10000) %>%
+  ggplot(aes(metro_dist, price)) +
+  geom_point() +
+  geom_smooth(method="loess")
 
 dev.off()
 
+data$neighbourhood_cleansed <- as.factor(data$neighbourhood_cleansed)
+
 #Regression
-summary(lm(price ~ cs_dist*Holiday, data))
+model_all_int_hol_wkend <- lm(price ~ .- date -listing_id -price - adjusted_price -longitude - latitude -Day -schiphol_number_in_500 + Weekend*metro_dist + Weekend*tram_dist + Weekend*schiphol_dist + Weekend*cs_dist + Holiday*metro_dist + Holiday*tram_dist + Holiday*cs_dist + Holiday*schiphol_dist, data,  na.action = na.omit)
+summary(model_all_int_hol_wkend)

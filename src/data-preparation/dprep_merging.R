@@ -2,10 +2,13 @@ library(data.table)
 library(tidyverse)
 
 # Data Import
-holidays <- fread("../../data/holidays_nl_north.csv")
-calendar <- fread("../../data/calendar.csv")
-listings <- fread("../../data/listings.csv")
+holidays <- fread("../../data/holidays_nl_north.csv", select=c("Date", "Holiday", "Day"))
+calendar <- fread("../../data/calendar.csv", select = c("listing_id", "date", "price", "adjusted_price"))
+listings <- fread("../../data/listings.csv", select = c("id", "neighbourhood_cleansed"))
 distance <- fread("../../data/distances_infra.csv")
+
+#Add Weekend Variable
+holidays <- holidays %>% mutate(Weekend = (Day == '7'| Day =='1'))
 
 # Change strings to date, so we can join on them
 holidays$Date <- as.Date(holidays$Date, "%d-%m-%Y")
@@ -13,7 +16,6 @@ calendar$date <- as.Date(calendar$date, "%Y-%m-%d")
 
 # Dataset merging
 listings <- listings %>%
-  select(c(id, property_type, room_type, accommodates, bedrooms, beds)) %>%
   left_join(distance, by = "id")
 
 calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))%>%
