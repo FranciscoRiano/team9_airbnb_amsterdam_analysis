@@ -1,5 +1,7 @@
 # Libraries
 library(googledrive)
+#Make data directory
+dir.create("../../data")
 
 # Raw Data Download
 downloads <- list(c(id = "1MLHy1bBmdO16cE51vAAIctJgAxFqAR4L", name = 'holidays_nl_north'),
