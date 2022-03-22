@@ -129,7 +129,13 @@ data %>%
 
 dev.off()
 
+<<<<<<< HEAD
 #Regression
+=======
+data$neighbourhood_cleansed <- as.factor(data$neighbourhood_cleansed)
+
+#Regression model
+>>>>>>> b5e158134855fef4d74cc340dfb963f4c79496e3
 model_all_int_hol_wkend <- lm(price ~ .- date -listing_id -price - adjusted_price -longitude - latitude -Day -schiphol_number_in_500 + Weekend*metro_dist + Weekend*tram_dist + Weekend*schiphol_dist + Weekend*cs_dist + Holiday*metro_dist + Holiday*tram_dist + Holiday*cs_dist + Holiday*schiphol_dist, data,  na.action = na.omit)
 summary(model_all_int_hol_wkend)
 
