@@ -42,7 +42,7 @@ The research method that is used in this project is a regression analysis. This 
 ## Conclusion
 
 ### Managerial Relevance
-
+Prices of AirBnb accommodation vary across cities and countries. There are various factors that can play a role in the price setting but this study focuses on the infrastructure as it is a crucial aspect when deciding where to travel. If the the analysis shows that living close to certain kind of infrastructure leads to higher price, these insights can be further used by the management of Airbnb as well as the host for more effective price setting. Public policy makers can also benefit from this research. If there is a significant effect of infrastructure on pricing, they should invest in developing and improving it.
 
 ### Limitations and Future Directions of Research
 
