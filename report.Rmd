@@ -23,7 +23,7 @@ Infrastructure is the key to developing a successful tourism destination. Touris
 
 ## Data
 
-The data used in this project come from website insideairbnb.com and ??? (holidays). Inside AirBnB is an open source activist project that provides publicly available data from AirBnB. 
+The data used in this project come from website insideairbnb.com which is an open source activist project that provides publicly available data from AirBnB. Moreover,infrastructure information was collected from city of Amsterdam website at maps.amsterdam.nl. Lastly, a new dataset was created with Dutch holidays.
 
 ### Data Collection
 
@@ -31,12 +31,11 @@ This research focuses on price analysis of AirBnB in Amsterdam, the Netherlands 
 
 ### Data Processing
 
-Several steps were taken in order to create a final dataset that will be used throughout the analysis. Firstly, all the non-essential variables were removed from listings dataset. Id and five control variables were kept namely, property_type, room_type, accommodates, bedrooms, beds. Next, the listings dataset was merged with distance variable which shows the number of meters from a given accommodation to the Amsterdam Central station. Lastly, datasets calendar, listings and holidays were merged together. Missing values ???...
+Several steps were taken in order to create a final dataset that will be used throughout the analysis. Firstly, in the holidays dataset new variable "weekend" was created. Next, datasets listings, distance, calendar and holidays were joined together creating a new merged dataset. Furthermore, two new constructs per each infrastructure point of interest were created. The first variable calculates the distance from each accommodation to metro, tram, swimming pool, Schiphol airport, Central station, place of religion, park, sport facilities. The second variable states how many of the eight above mentioned infrastructure measures can be find within 500 meters. Last step was to clean the data during which missing values were reviewed and price variables were converted from character to numeric type. The final cleaned dataset that will be used for the analysis was saved to folder gen/output.
 
 ## Methodology
 
 The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from Amsterdam Central Station', 'Distance to/from Schiphol Airport', 'Distance to/from tram stops', 'Distance to/from metro stops' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderator 'Holidays in NL' will be included and analyzed. According to this model, the research questions can be answered.
-
 
 ## Results
 
@@ -44,8 +43,9 @@ The research method that is used in this project is a regression analysis. This 
 
 ### Managerial Relevance
 
+
 ### Limitations and Future Directions of Research
 
-This study has also some limitations. Firstly, the research was geographically limited to Amsterdam and it only analyzed data from AirBnB. Thus, future study can focus on different location or industry to improve the generalizability. Secondly, other factors that might be driving or influencing the relationship could be evaluated. For example, the reviews and ratings as well as sentiment between reviews might be another drivers of the relationship and can provide interesting insights in general.  
+This study has also some limitations. The research was geographically limited to Amsterdam so future studies could focus on different location to test the generalizability of the results. Moreover, only data collected from AirBnB were analyzed in this study. Thus, focusing on other hospitality providers or another industry might bring interesting results. Furthermore, other factors that likely have effect on price could be included in the future studies. For example, reviews and ratings as well as review sentiment might be driving or influencing the relationship to some extent. Hence, building upon the current study by adding impact of reviews could provide new insights.  
 
 ## References
