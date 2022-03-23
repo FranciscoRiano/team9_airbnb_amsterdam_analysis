@@ -8,6 +8,8 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
   <img width="70%" src="https://blog.atairbnb.com/wp-content/uploads/2015/06/DynamicPricing-Blog-AL-02-03.jpg">
 </p>
 
+## Index
+1. [Motivation](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#motivation)
 
 ## Motivation
 
