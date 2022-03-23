@@ -2,7 +2,7 @@
 
 ---
 
-__Do factors like distance to/from Amsterdam Central station, distance to/from Schiphol airport, distance to/from tram stops and distance to/from metro stops influence the prices of AirBnB listings? And does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday or not?__
+__Do factors like distance to/from Amsterdam Central station, distance to/from Schiphol airport, distance to/from tram stops and distance to/from metro stops influence the prices of AirBnB listings? And does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not?__
 
 <p align="center">
   <img width="70%" src="https://blog.atairbnb.com/wp-content/uploads/2015/06/DynamicPricing-Blog-AL-02-03.jpg">
@@ -11,7 +11,7 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
 
 ## Motivation
 
-Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists. The reason for diving into this research is that the distances to transportation hubs and busy areas are important considerations for tourists when choosing an accommodation. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
+Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists.The reason for diving into this research is that the distances to transportation hubs and busy areas are important considerations for tourists when choosing an accommodation. Also other infrastructure components like swimming pools, sport facilities, places of religion or a park can be factors which improve the living conditions of local residents as well as tourists. These components are for some people of vital importance in choosing a place to stay. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Moreover, the holiday season and weekends can be contributing factors to prices of AirBnB listings because the demand for accomodations increases. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' and 'does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not? could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
 
 ## Method and results
 
