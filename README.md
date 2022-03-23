@@ -10,6 +10,12 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
 
 ## Index
 1. [Motivation](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#motivation)
+2. [Method and results](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#method-and-results)
+3. [Repository overview](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#repository-overview)
+4. [Running instructions](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#running-instructions)
+5. [More resources](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#more-resources)
+6. [About](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#about)
+7. [Team 9 contributors](https://github.com/FranciscoRiano/team9_airbnb_amsterdam_analysis#team-9-contributors)
 
 ## Motivation
 
