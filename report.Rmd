@@ -1,8 +1,8 @@
 ---
-title: "Does the infrastructure of Amsterdam make a difference?"
+title: Does the infrastructure of Amsterdam make a difference?
 author: 
-- "Francisco Riaño Martinez", "Jan van der Doe", "Kamila Majdlenová", "Pomme Verhagen", "Yuetong Bi"
-date: ""
+- "Francisco Riaño Martinez, Jan van der Doe, Kamila Majdlenová, Pomme Verhagen, Yuetong Bi"
+date: 27.03.2022
 output: pdf_document
 ---
 
