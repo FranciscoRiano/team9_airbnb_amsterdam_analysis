@@ -53,6 +53,7 @@ Our study also considers the correlation between independent variables, the poss
 
 Based on the results of summary of multiple regression model (model_ poly_ log_ Int), it can be showed that most of the variables are set within the 99.9% confidence interval, indicating that these variables have a significant correlation with price. The adjusted R square shows that how much variation of price of Airbnb is explained by the independent variables of infrastructure factors in the regression model. The adjusted R is 0.05734, which means multiple regression model is a good fit, that proves the effectiveness of the model. Through this model we can predict the price of Airbnb according to the different value of independent variables.
 
+![image](https://user-images.githubusercontent.com/98964449/159990119-6b354f46-69aa-44dc-93d2-bff27fbe27bc.png)
 
 
 ## Conclusion
