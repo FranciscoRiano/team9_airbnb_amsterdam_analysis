@@ -2,7 +2,7 @@
 
 ---
 
-__Do factors like distance to/from Amsterdam Central station, distance to/from Schiphol airport, distance to/from tram stops and distance to/from metro stops influence the prices of AirBnB listings? And does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not?__
+__Do factors like distance to/from tram stops, metro stops, central station, swimming pools, religious sites, parks, Schiphol airport, sport facilities influence the prices of AirBnB listings in Amsterdam? And does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not?__
 
 <p align="center">
   <img width="70%" src="https://blog.atairbnb.com/wp-content/uploads/2015/06/DynamicPricing-Blog-AL-02-03.jpg">
@@ -19,18 +19,18 @@ __Do factors like distance to/from Amsterdam Central station, distance to/from S
 
 ## Motivation
 
-Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists.The reason for diving into this research is that the distances to transportation hubs and busy areas are important considerations for tourists when choosing an accommodation. Also other infrastructure components like swimming pools, sport facilities, places of religion or a park can be factors which improve the living conditions of local residents as well as tourists. These components are for some people of vital importance in choosing a place to stay. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Moreover, the holiday season and weekends can be contributing factors to prices of AirBnB listings because the demand for accomodations increases. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' and 'does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not? could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
+Infrastructure is the key to developing a successful tourism destination. Tourism industry stimulates investments in new infrastructure, most of which improves the living conditions of local residents as well as tourists.The reason for diving into this research is that the distances to transportation hubs and busy areas are important considerations for tourists when choosing an accommodation. Also other infrastructure components like swimming pools, sport facilities, religious sites or parks can be factors which improve the living conditions of local residents as well as tourists. These components are for some people of vital importance in choosing a place to stay. While Airbnb plays an important role in the tourism industry of today, infrastructure components might influence prices of Airbnb listings accordingly. Moreover, the holiday season and weekends can be contributing factors to prices of AirBnB listings because the demand for accommodations increases. Therefore questions like: 'Does the distance to/from Amsterdam Central Station or the distance to/from Schiphol Airport in relation to the location of the Airbnb listing influence the prices of that Airbnb listing?' and 'does the effect of the several infrastructure components on AirBnB pricing differ depending on whether there is a holiday/weekend or not? could be asked. This code is written in order to find answers to these questions which focuses on Airbnb listings in Amsterdam.
 
 ## Method and results
 
 ### Research method
-The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from Amsterdam Central Station', 'Distance to/from Schiphol Airport', 'Distance to/from tram stops', 'Distance to/from metro stops' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderator 'Holidays in NL' will be included and analyzed. According to this model, the research questions can be answered.
+The research method that is used in this project is a regression analysis. This method is used to predict the influence of the independent variables 'Distance to/from tram stops', 'Distance to/from metro stops', 'Distance to/from Amsterdam Central Station', 'Distance to/from swimming pools', 'Distance to/from religious sites', 'Distance to/from parks', 'Distance to/from Schiphol Airport' and 'Distance to/from sport facilities' on the dependent variable 'Prices of Airbnb listings'. Furthermore the moderators 'Holidays in NL' and 'Weekend' will be included and analyzed. According to this model, the research questions can be answered.
   
   
-  Moderator: Holidays in NL.
-  The relationship between the infrastructure of Amsterdam and price of Airbnb may be influenced by whether it is holiday in the Netherlands.
+  Moderator: Holidays in NL and Weekend.
+  The relationship between the infrastructure of Amsterdam and price of Airbnb may be influenced by whether it is holiday in the Netherlands or weekend.
 
-![WhatsApp Image 2022-03-13 at 5 05 55 PM](https://user-images.githubusercontent.com/98962946/158178822-28fd9df1-2965-4463-89f9-adf1cc83551b.jpeg)
+<img width="943" alt="conceptual model" src="https://user-images.githubusercontent.com/82728695/159914780-41e52377-8819-4f82-9f33-43deb44acae6.png">
 
 ### Results
 
@@ -61,7 +61,7 @@ Related literature and/or documentation. (Link)
 
 ## About
 This research is conducted as a part of the course [Data Preparation and Workflow Management](https://github.com/hannesdatta/course-dprep) of TiSEM department at Tilburg University.
-The study is conducted by Marketing Master students who are part of team 9 during spring semester 2022. The data used for this project can be found at [Inside AirBnB](http://insideairbnb.com/get-the-data.html).
+The study is conducted by Marketing Master students who are part of team 9 during spring semester 2022. The data used for this project can be found at [Inside AirBnB](http://insideairbnb.com/get-the-data.html) and at [City of Amsterdam](https://maps.amsterdam.nl/open_geodata/?LANG=en).
 
 ## Team 9 contributors
 Team members: [Francisco Riaño Martinez](https://github.com/FranciscoRiano), [Jan van der Doe](https://github.com/janvanderdoe), [Kamila Majdlenová](https://github.com/kammaj), [Pomme Verhagen](https://github.com/pommeverhagen), [Yuetong Bi](https://github.com/YuetongBi)
