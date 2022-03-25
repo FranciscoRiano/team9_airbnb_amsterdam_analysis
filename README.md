@@ -66,7 +66,22 @@ install.packages("modelsummary")
 install.packages("rlist")
 ```
 ## More resources
-Related literature and/or documentation. (Link)
+The is a large amount of research done explaining the factors affecting the Airbnb pricing or demand. Below overview of related research can be find. 
+
+Research done by Gutiérrez, García-Palomares, Romanillos and Salas-Olmedo (2017) with focus on Barcelona find that there is a positive relationship between the accommodation price and sightseeing spots. New York based study also show that location and neighborhood of the listing affect the price (Deboosere, Kerrigan, Wachsmuth & El-Geneidy, 2019).
+
+Moreover, there is a negative relationship between distance to city center and the listing demand (Gunter & Önder, 2017). This means, that the further the Airbnb listing is from the city center the less willing are the consumers to make the booking.
+
+Study also shows that the price of an accommodation changes during weekend (Gibbs, Guttentag, Gretzel, Yao & Morton, 2018). For Airbnb listing variable Weekend was found to influence the price positively compared to hotels. 
+
+
+- Deboosere, R., Kerrigan, D. J., Wachsmuth, D., & El-Geneidy, A. (2019). Location, location and professionalization: a multilevel hedonic analysis of Airbnb listing prices and revenue. Regional Studies, Regional Science, 6(1), 143–156.
+
+- Gibbs, C., Guttentag, D., Gretzel, U., Yao, L., & Morton, J. (2018). Use of dynamic pricing strategies by Airbnb hosts. International Journal of Contemporary Hospitality Management, 30(1), 2–20.
+
+- Gunter, U., & Önder, I. (2017). Determinants of Airbnb demand in Vienna and their implications for the traditional accommodation industry. Tourism Economics, 24(3), 270–293.
+
+- Gutiérrez, J., García-Palomares, J. C., Romanillos, G., & Salas-Olmedo, M. H. (2017). The eruption of Airbnb in tourist cities: Comparing spatial patterns of hotels and peer-to-peer accommodation in Barcelona. Tourism Management, 62, 278–291.
 
 ## About
 This research is conducted as a part of the course [Data Preparation and Workflow Management](https://github.com/hannesdatta/course-dprep) of TiSEM department at Tilburg University.
