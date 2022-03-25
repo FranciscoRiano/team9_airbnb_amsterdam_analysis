@@ -39,6 +39,7 @@ According to the plots it can be found that schiphol_dist is positively correlat
 
 We also established multiple regression model “model_ poly_ log_ Int” to find the possible interaction factors (weekend and holidays) would affect the result. The adjusted R is 0.05734, which means multiple regression model is a good fit, that proves the effectiveness of the model.
 
+![image](https://user-images.githubusercontent.com/98964449/160112908-8c5e1bd2-fe06-4e3a-8118-88a8d4b397f4.png)
 
 
 ### Conclusion
