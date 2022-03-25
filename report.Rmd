@@ -21,6 +21,8 @@ Infrastructure is the key to developing a successful tourism destination. Touris
 
 ## Background
 
+There is a large amount of research done exploring Airbnb pricing and its relationship to location (Deboosere, Kerrigan, Wachsmuth & El-Geneidy, 2019; Gibbs, Guttentag, Gretzel, Yao & Morton, 2018; Gunter & Önder, 2017; Gutiérrez, García-Palomares, Romanillos & Salas-Olmedo, 2017). Study of Gunter & Önder (2017) show that the further the Airbnb listing is from the city center the less willing are the consumers to make the booking. If the demand decreases the more remote listings might have to lower their prices to attract consumers. This seems to be true in Barcelona where the price of the accommodation goes down the further it is from tourist attractions (Gutiérrez et al., 2017). Moreover, Deboosere et al. (2019) found similar results where neighborhood accessibility was affecting the price of accommodation in New York. However, the opposite response was observed for pricing of Airbnb listings during weekend (Gibbs et al., 2018). Compared to hotels where the price went down Airbnb prices increased during weekend (Gibbs et al., 2018). Therefore, it remains unclear how the infrastructure in Amsterdam influences the price and whether this relationship differs if there is a weekend/holiday or not.
+
 ## Data
 
 The data used in this project comes from the website insideairbnb.com which is an open source activist project that provides publicly available data from AirBnB. Moreover,infrastructure information was collected from the city of Amsterdam website at maps.amsterdam.nl. Lastly, a new dataset was created with Dutch holidays.
