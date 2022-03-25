@@ -46,7 +46,7 @@ This paper studies several infrastructure factors affecting the price of AirBnB 
 By plotting the graphs between the variables schiphol_dist (distance to/from Schiphol airport), tram_dist (distance to tram stops), metro_dist (distance to/from metro stops), cs_dist (distance to/from AMS central station), swim_dist (distance to/from swimming pool), religion_dist (distance to/from the places of religion), park_dist (distance to/from park), and sport_dist (distance to/from sport facilities) and price to visualize a general overview of their correlations.
 
 ```{r,echo=FALSE, fig.align='center', fig.cap= "Relationship between price and distance"}
-knitr::include_graphics('gen/output/scatter_price_distance.pdf')
+knitr::include_graphics('../../gen/output/scatter_price_distance.pdf')
 ```
 
 According to the plots it can be found that schiphol_dist is positively correlated with price, while the rest of the independent variables are negatively correlated with price. Since the value of dist is particularly large, the log() function is used to process the value for visualization again in order to prevent the influence of the huge value on the model.
