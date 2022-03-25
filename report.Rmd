@@ -67,3 +67,11 @@ Prices of AirBnb accommodation vary across cities and countries. There are vario
 This study also has some limitations. The research was geographically limited to Amsterdam so future studies could focus on different countries or cities to test the generalizability of the results. Moreover, only data collected from AirBnB were analyzed in this study. Thus, focusing on other hospitality providers or another industry might bring interesting results. Furthermore, other factors that likely have effect on price could be included in the future studies. For example, reviews and ratings as well as review sentiment might be driving or influencing the relationship to some extent. Hence, building upon the current study by adding impact of reviews could provide new insights.  
 
 ## References
+
+Deboosere, R., Kerrigan, D. J., Wachsmuth, D., & El-Geneidy, A. (2019). Location, location and professionalization: a multilevel hedonic analysis of Airbnb listing prices and revenue. Regional Studies, Regional Science, 6(1), 143–156.
+
+Gibbs, C., Guttentag, D., Gretzel, U., Yao, L., & Morton, J. (2018). Use of dynamic pricing strategies by Airbnb hosts. International Journal of Contemporary Hospitality Management, 30(1), 2–20.
+
+Gunter, U., & Önder, I. (2017). Determinants of Airbnb demand in Vienna and their implications for the traditional accommodation industry. Tourism Economics, 24(3), 270–293.
+
+Gutiérrez, J., García-Palomares, J. C., Romanillos, G., & Salas-Olmedo, M. H. (2017). The eruption of Airbnb in tourist cities: Comparing spatial patterns of hotels and peer-to-peer accommodation in Barcelona. Tourism Management, 62, 278–291.
