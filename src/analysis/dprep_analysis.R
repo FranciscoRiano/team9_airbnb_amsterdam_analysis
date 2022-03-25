@@ -48,7 +48,7 @@ data %>%
   drop_na() %>%
   group_by(cs_number_in_500) %>%
   summarize(price = mean(price), count = n()) %>% 
-  ggplot(aes(cs_in_500, price)) +
+  ggplot(aes(cs_number_in_500, price)) +
   geom_col() +
   geom_text(aes(y = price + 10, label=paste("n=", count)), vjust=0)
 
