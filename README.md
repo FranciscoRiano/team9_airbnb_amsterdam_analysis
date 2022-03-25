@@ -65,6 +65,8 @@ install.packages("Hmisc")
 install.packages("ggplot2")
 install.packages("modelsummary")
 install.packages("rlist")
+install.packages("reshape2")
+install.packages("broom")
 ```
 ## More resources
 The is a large amount of research done explaining the factors affecting the Airbnb pricing or demand. Below overview of related research can be find. 
