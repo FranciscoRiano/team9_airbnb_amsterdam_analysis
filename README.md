@@ -32,7 +32,14 @@ The research method that is used in this project is a regression analysis. This 
 
 <img width="943" alt="conceptual model" src="https://user-images.githubusercontent.com/82728695/159914780-41e52377-8819-4f82-9f33-43deb44acae6.png">
 
+
 ### Results
+
+According to the plots it can be found that schiphol_dist is positively correlated with price, while the rest of the independent variables are negatively correlated with price. Since the value of dist is particularly large, the log() function is used when relationships are not linear, it allows to process the value for visualization again in order to prevent the influence of the huge value on the model. Based on further visualization, it can be found that price around 175 is a significant inflection point that change the direction.
+
+We also established multiple regression model “model_ poly_ log_ Int” to find the possible interaction factors (weekend and holidays) would affect the result. The adjusted R is 0.05734, which means multiple regression model is a good fit, that proves the effectiveness of the model.
+
+
 
 ### Conclusion
 
