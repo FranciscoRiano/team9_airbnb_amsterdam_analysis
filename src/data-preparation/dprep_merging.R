@@ -5,7 +5,7 @@ library(tidyverse)
 holidays <- fread("../../data/holidays_nl_north.csv", select=c("Date", "Holiday", "Day"))
 calendar <- fread("../../data/calendar.csv", select = c("listing_id", "date", "price", "adjusted_price"))
 listings <- fread("../../data/listings.csv", select = c("id", "neighbourhood_cleansed"))
-distance <- fread("../../data/distances_infra.csv")
+distance <- fread("../../gen/input/distances_infra.csv")
 
 #Add Weekend Variable
 holidays <- holidays %>% mutate(Weekend = (Day == '7'| Day =='1'))
