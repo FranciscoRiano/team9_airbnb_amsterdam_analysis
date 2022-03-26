@@ -1,7 +1,7 @@
 # Get final dataset
 library(data.table)
 library(dplyr)
-data <- fread("../../gen/input/calendar_holiday_distance.csv.gz")
+data <- fread("../../gen/input/calendar_holiday_distance.csv.gz", nrows=100000)
 
 #Change prices to numeric and remove dollar sign
 data$price <- as.numeric(gsub("\\$", "", data$price))
