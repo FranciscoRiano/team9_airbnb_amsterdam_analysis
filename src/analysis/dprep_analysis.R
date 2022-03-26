@@ -100,7 +100,7 @@ model_poly_log_int <- lm(price ~ log(tram_dist) + tram_number_in_500 + I(log(tra
                            Holiday*log(metro_dist) + Holiday*log(tram_dist) + Holiday*log(cs_dist) + Holiday*log(schiphol_dist) +
                            neighbourhood_cleansed
                          , data, na.action = na.omit)
-summary(model_poly_log_int) # Should be including as.factor(neighbourhood_cleansed) but pc couldn't handle it haha
+summary(model_poly_log_int)
 
 #Save output in csv
 library(broom)
