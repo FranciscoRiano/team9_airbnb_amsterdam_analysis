@@ -21,9 +21,5 @@ listings <- listings %>%
 calendar <- calendar %>% left_join(listings, by = c("listing_id" = "id"))%>%
   left_join(holidays, by= c("date" = "Date"))
 
-#Make directory
-dir.create("../../gen")
-dir.create("../../gen/input")
-
 # Write csv.gz file with all the datasets together
 fwrite(calendar, "../../gen/input/calendar_holiday_distance.csv.gz")
