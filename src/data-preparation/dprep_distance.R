@@ -1,10 +1,10 @@
 library(data.table)
 tram_metro_stops <- read.csv("../../data/tram_metro_stops.csv", sep=';')
 listings <- fread("../../data/listings.csv", select = c('id', 'longitude', 'latitude'))
-swimmingpools <- read.csv("../../data/ZWEMWATER.csv", sep=';')
-religion <- read.csv("../../data/RELIGIE.csv", sep=';')
-park <- read.csv("../../data/PARKPLANTSOENGROEN.csv", sep=';')
-sport <- read.csv("../../data/SPORT_OPENBAAR.csv", sep=';')
+swimmingpools <- read.csv("../../data/swimmingpools.csv", sep=';')
+religion <- read.csv("../../data/religion.csv", sep=';')
+park <- read.csv("../../data/park.csv", sep=';')
+sport <- read.csv("../../data/sport.csv", sep=';')
 
 library(dplyr)
 
@@ -59,3 +59,10 @@ for (dataset in datasets) { #This takes 15.49809 mins
 }
 finish <- Sys.time()
 print(finish-start)
+
+#Make directory
+dir.create("../../gen")
+dir.create("../../gen/input")
+
+# Write csv file with all the datasets together
+fwrite(listing, "../../gen/input/distances_infra.csv")
