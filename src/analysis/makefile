@@ -8,9 +8,8 @@ $(OUTPUT)/model_dist_num_wkend_hol.csv $(OUTPUT)/model_log_dist_num_wkend_hol.cs
 $(OUTPUT)/scatter_price_distance.pdf: dprep_graphs.R $(OUTPUT)/calendar_holiday_distance_clean.csv.gz
 	R --vanilla < dprep_graphs.R
 
-
 $(OUTPUT)/report.pdf: report.Rmd
-	R -e "rmarkdown::render('report.Rmd', output_format = 'pdf_document')"
+	R -e "rmarkdown::render('report.Rmd', 'pdf_document', 'AMS_analysis.pdf', '../../gen/output')"
 
 
 	
