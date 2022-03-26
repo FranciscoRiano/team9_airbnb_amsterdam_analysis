@@ -1,4 +1,5 @@
 library(data.table)
+library(modelsummary)
 
 #Get clean and merged dataset
 data <- fread("../../gen/output/calendar_holiday_distance_clean.csv.gz")
@@ -32,6 +33,15 @@ model_log_dist_num_wkend_hol <- lm(price ~ log(tram_dist) + tram_number_in_500 +
                            neighbourhood_cleansed
                          , data, na.action = na.omit)
 summary(model_log_dist_num_wkend_hol)
+
+#model to picture
+msummary(model_log_dist_num_wkend_hol,
+         title = "Regression model",
+         estimate = "{estimate}{stars} | ({std.error})",
+         statistic = NULL,
+         gof_omit = "AIC|BIC|Log|Pseudo|F",
+         output = "../../gen/output/regression.png")
+
 
 #Save output in csv
 library(broom)
