@@ -65,4 +65,4 @@ dir.create("../../gen")
 dir.create("../../gen/input")
 
 # Write csv file with all the datasets together
-fwrite(listing, "../../gen/input/distances_infra.csv")
+fwrite(listings, "../../gen/input/distances_infra.csv")
