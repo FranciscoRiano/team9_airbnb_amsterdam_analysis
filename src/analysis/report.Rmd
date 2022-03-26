@@ -1,13 +1,18 @@
 ---
-title: Does the infrastructure of Amsterdam make a difference?
-author: 
-- "Francisco Riaño Martinez, Jan van der Doe, Kamila Majdlenová, Pomme Verhagen, Yuetong Bi"
-date: 27.03.2022
-output: pdf_document
+title: "Does the infrastructure of Amsterdam make a difference?"
+author: Francisco Riaño Martinez, Jan van der Doe, Kamila Majdlenová, Pomme Verhagen,
+  Yuetong Bi
+date: "27.03.2022"
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
-library(rlist)
+library(tidyverse)
+library(data.table)
+library(reshape2)
+library(ggplot2)
 library(modelsummary)
 ```
 
@@ -45,17 +50,28 @@ This paper studies several infrastructure factors affecting the price of AirBnB 
 
 By plotting the graphs between the variables schiphol_dist (distance to/from Schiphol airport), tram_dist (distance to tram stops), metro_dist (distance to/from metro stops), cs_dist (distance to/from AMS central station), swim_dist (distance to/from swimming pool), religion_dist (distance to/from the places of religion), park_dist (distance to/from park), and sport_dist (distance to/from sport facilities) and price to visualize a general overview of their correlations.
 
-```{r,echo=FALSE, fig.align='center', fig.cap= "Relationship between price and distance"}
-knitr::include_graphics('../../gen/output/scatter_price_distance.pdf')
+```{r,echo=FALSE, message = FALSE, warning = FALSE, fig.align='center', fig.cap= "Relationship between price and distance"}
+#Distance on price
+knitr::include_graphics('../../gen/output/distance_price.png')
 ```
 
 According to the plots it can be found that schiphol_dist is positively correlated with price, while the rest of the independent variables are negatively correlated with price. Since the value of dist is particularly large, the log() function is used to process the value for visualization again in order to prevent the influence of the huge value on the model.
+
+```{r,echo=FALSE, message = FALSE, warning = FALSE, fig.align='center', fig.cap= "Relationship between price and log distance"}
+#Log distance on price
+knitr::include_graphics('../../gen/output/logdistance_price.png')
+```
 
 Based on further visualization, it can be found that price around 175 is a significant inflection point that changes the direction. To be more specific, the listings with prices below 175 showing opposite results to those with prices above 175. For listings priced less than 175, there is a positive correlation between price and each variable. For the listings with price greater than 175, the relationship between price and the variables shows a negative relationship.
 
 It can also be concluded that the infrastructure is often related to the distance. For further research, this paper analyzes the number of metros, airports, AMS central station, etc. within a 500-meter radius, and uses slice_sample(n=100000) to extract data from a sample of 100,000, uses the total ASE function of ggplot to map the x-axis and y-axis, and uses the geom_col() function to draw a histogram. According to the histogram of the number of each infrastructure and the price of the neighborhood within 500 meters, it can be found that the number conforms to the right-hand side normal distribution with a mean value of 0, and most of the numbers are distributed in the range of 0 to 3.
 
 The study also considers the correlation between independent variables, the possible interaction factors would affect the result. Weekend and holidays (dummy variables) are set as two moderators and establish a model_ poly_ log_ Int multiple regression model.
+
+```{r,echo=FALSE, message = FALSE, warning = FALSE, fig.align='center', fig.cap= "Regression model"}
+#Regression model with log
+knitr::include_graphics('../../gen/output/regression.png')
+```
 
 Based on the results of summary of multiple regression model (model_ poly_ log_ Int), it can be shown that most of the variables are set within the 99.9% confidence interval, indicating that these variables have a significant correlation with price. The adjusted R square shows that how much variation of price of AirBnB is explained by the independent variables of infrastructure factors in the regression model. The adjusted R is 0.05734, which means multiple regression model is a good fit, that proves the effectiveness of the model. Through this model the price of AirBnB according to the different value of independent variables can be predicted.
 
