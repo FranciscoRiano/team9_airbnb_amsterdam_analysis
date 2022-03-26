@@ -16,11 +16,15 @@ long_data %>%
   ggplot(aes(value, price, colour = variable)) +
   geom_smooth(se=F)
 
+ggsave("../../gen/output/distance_price.png")
+
 #Log distance on price
 long_data %>%
   slice_sample(n=1000000) %>% 
   ggplot(aes(log(value), price, colour = variable)) +
   geom_smooth(se=F)
+
+ggsave("../../gen/output/logdistance_price.png")
 
 #Plots of the number of infras in a 500 meter radius
 s_size <- 10000
