@@ -30,7 +30,7 @@ The research method that is used in this project is a regression analysis. This 
   Moderator: Holidays in NL and Weekend.
   The relationship between the infrastructure of Amsterdam and price of AirBnB may be influenced by whether it is holiday in the Netherlands or weekend.
 
-<img width="943" alt="conceptual model" src="https://user-images.githubusercontent.com/82728695/159914780-41e52377-8819-4f82-9f33-43deb44acae6.png">
+<img width="581" alt="conceptual model" src="https://user-images.githubusercontent.com/82728695/160240450-ae989220-9c66-4c52-b26c-992819e0b27c.png">
 
 
 ### Results
