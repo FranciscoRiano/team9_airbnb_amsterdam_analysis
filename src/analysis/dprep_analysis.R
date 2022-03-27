@@ -42,9 +42,3 @@ msummary(model_log_dist_num_wkend_hol,
          gof_omit = "AIC|BIC|Log|Pseudo|F",
          output = "../../gen/output/regression.png")
 
-
-#Save output in csv
-library(broom)
-write.csv(tidy(model_dist_num_wkend_hol) , "../../gen/output/model_dist_num_wkend_hol.csv")
-write.csv(tidy(model_log_dist_num_wkend_hol) , "../../gen/output/model_log_dist_num_wkend_hol.csv")
-
