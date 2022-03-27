@@ -69,6 +69,7 @@ install.packages("rlist")
 install.packages("reshape2")
 install.packages("broom")
 install.packages("Rcpp")
+install.packages("phantomJS")
 ```
 ## More resources
 There is a large amount of research done explaining the factors affecting the AirBnB pricing or demand. Below an overview can be found of the related research.
