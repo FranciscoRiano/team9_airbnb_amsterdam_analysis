@@ -36,11 +36,11 @@ The research method that is used in this project is a regression analysis. This 
 
 ### Results
 
-According to the plots it can be found that schiphol_dist is positively correlated with price, while the rest of the independent variables are negatively correlated with price. Since the value of dist is particularly large, the log() function is used when relationships are not linear, it allows to process the value for visualization again in order to prevent the influence of the huge value on the model. Based on further visualization, it can be found that price around 175 is a significant inflection point that change the direction.
+According to the plots it can be found that schiphol_dist is positively correlated with price, while the rest of the independent variables are negatively correlated with price. Since the value of dist is particularly large, the log() function is used when relationships are not linear, it allows to process the value for visualization again in order to prevent the influence of the huge value on the model. Based on further visualization, it can be found that price around 175 has a significant inflection point that changes the direction.
 
 ![image](https://user-images.githubusercontent.com/98964449/160112908-8c5e1bd2-fe06-4e3a-8118-88a8d4b397f4.png)
 
-We also established multiple regression model “model_ poly_ log_ Int” to find the possible interaction factors (weekend and holidays) would affect the result. The adjusted R is 0.05734, which means multiple regression model is a good fit, that proves the effectiveness of the model.
+We also established multiple regression model “model_ poly_ log_ Int” to find the possible interaction factors (weekend and holidays) would affect the result. The adjusted R is 0.05734, which means the multiple regression model is a good fit, that proves the effectiveness of the model.
 
 
 ### Conclusion
@@ -70,7 +70,7 @@ install.packages("reshape2")
 install.packages("broom")
 ```
 ## More resources
-The is a large amount of research done explaining the factors affecting the AirBnB pricing or demand. Below overview of related research can be find. 
+There is a large amount of research done explaining the factors affecting the AirBnB pricing or demand. Below an overview can be found of the related research.
 
 Research done by Gutiérrez, García-Palomares, Romanillos and Salas-Olmedo (2017) with focus on Barcelona find that there is a positive relationship between the accommodation price and sightseeing spots. New York based study also show that location and neighborhood of the listing affect the price (Deboosere, Kerrigan, Wachsmuth & El-Geneidy, 2019).
 
