@@ -2,3 +2,7 @@
 *.csv
 *.csv.gz
 .RData
+*.png
+*.tex
+*.html
+*.Rmd
